@@ -37,4 +37,6 @@ Note:I use This Url In This Project.
 ---
 useed Retrofit 2 Library For connection to the server and Parse JSON File.
 
+apk file : https://sanaebadi.info/AndroidApk/app-release.apk
+
 good luck :)
