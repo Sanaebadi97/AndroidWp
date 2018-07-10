@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/img_signal"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="115dp"
+            android:src="@drawable/ic_signal_wifi_off_blue_grey_800_24dp"/>
+
+        <TextView
+            android:id="@+id/txt_err_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_signal"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:text="@string/you_are_offline"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_try_again"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_err_network"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/network_err_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/try_again"
+            android:textColor="@color/colorTitle"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

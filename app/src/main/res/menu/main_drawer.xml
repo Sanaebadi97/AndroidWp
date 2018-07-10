@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item1"
+        android:icon="@drawable/ic_sentiment_dissatisfied_black_24dp"
+        android:title="@string/item1"/>
+
+    <item
+        android:id="@+id/item2"
+        android:icon="@drawable/ic_sentiment_neutral_black_24dp"
+        android:title="@string/item2"/>
+
+    <item
+        android:id="@+id/item3"
+        android:icon="@drawable/ic_sentiment_satisfied_black_24dp"
+        android:title="@string/item3"/>
+
+    <item
+        android:id="@+id/item4"
+        android:icon="@drawable/ic_sentiment_very_dissatisfied_black_24dp"
+        android:title="@string/item4"/>
+
+    <item
+        android:id="@+id/item5"
+        android:icon="@drawable/ic_sentiment_very_satisfied_black_24dp"
+        android:title="@string/item5"/>
+
+
+</menu>

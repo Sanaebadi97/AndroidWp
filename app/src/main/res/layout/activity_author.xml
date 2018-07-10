@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sanaebadi.info.ahwazdev.activity.AuthorActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_author_profile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        app:civ_border_color="@color/colorTitle"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background"/>
+
+    <TextView
+        android:id="@+id/txt_author_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorTitle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/img_author_profile"
+        app:layout_constraintStart_toStartOf="@id/img_author_profile"
+        app:layout_constraintTop_toBottomOf="@+id/img_author_profile"
+        tools:text="@string/author"/>
+
+    <TextView
+        android:id="@+id/txt_author_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/title_margin"
+        android:textAlignment="center"
+        android:padding="@dimen/title_padding"
+        android:textColor="@color/colorContent"
+        android:gravity="center|end"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_author_name"
+        tools:text="@string/about_author"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_github"
+        android:layout_width="@dimen/communicationNetworks"
+        android:layout_height="@dimen/communicationNetworks"
+        android:layout_marginEnd="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/github"
+        app:civ_border_color="@color/colorConnectionIcon"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_author_about"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_linkedin"
+        android:layout_width="@dimen/communicationNetworks"
+        android:layout_height="@dimen/communicationNetworks"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/linkedin"
+        android:layout_marginBottom="300dp"
+        app:civ_border_color="@color/colorConnectionIcon"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toEndOf="@id/img_github"
+        app:layout_constraintTop_toBottomOf="@id/txt_author_about"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_twitter"
+        android:layout_width="@dimen/communicationNetworks"
+        android:layout_height="@dimen/communicationNetworks"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/twitter"
+        app:civ_border_color="@color/colorConnectionIcon"
+        app:civ_border_width="2dp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintStart_toEndOf="@id/img_linkedin"
+        app:layout_constraintTop_toBottomOf="@id/txt_author_about"/>
+</android.support.constraint.ConstraintLayout>
