@@ -20,7 +20,7 @@ https://wordpress.org/plugins/rest-api/
 
 # Second Plugin :
 
-https://wordpress.org/plugins/rest-api-filanaebadi.infoter-fields/
+https://wordpress.org/plugins/rest-api-filter-fields/
 
 To find out how to install these plugins, see this link : *** https://www.youtube.com/watch?v=AXM1QgMODW0 ***
 
