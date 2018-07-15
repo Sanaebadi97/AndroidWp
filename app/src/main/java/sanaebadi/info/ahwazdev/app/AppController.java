@@ -15,7 +15,7 @@ public class AppController extends Application {
     super.onCreate();
 
     CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-      .setDefaultFontPath("fonts/iransans.ttf")
+      .setDefaultFontPath("fonts/bzar.ttf")
       .setFontAttrId(R.attr.fontPath)
       .build()
     );
