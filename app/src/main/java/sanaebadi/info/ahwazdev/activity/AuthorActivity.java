@@ -7,12 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import sanaebadi.info.ahwazdev.R;
+import sanaebadi.info.ahwazdev.model.Author;
 
 public class AuthorActivity extends BaseActivity {
 
@@ -60,37 +63,79 @@ public class AuthorActivity extends BaseActivity {
     txt_author_about.setText(authorAbout);
 
 
-    //************* Connect Network *************
+    //************* Connect SocialMedia *************
 
-    //GitHub
-    img_github.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
+//    //GitHub
+//    img_github.setOnClickListener(new View.OnClickListener() {
+//      @Override
+//      public void onClick(View v) {
+//
+//        Uri uri = Uri.parse("https://github.com/sanaebadi97"); // missing 'http://' will cause crashed
+//        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+//
+//      }
+//    });
+//
+//    //Linkedin
+//    img_linkedin.setOnClickListener(new View.OnClickListener() {
+//      @Override
+//      public void onClick(View v) {
+//
+//        Uri uri = Uri.parse("https://www.linkedin.com/in/sana-ebadi-699a03134"); // missing 'http://' will cause crashed
+//        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+//      }
+//    });
+//
+//    //Twitter
+//    img_twitter.setOnClickListener(new View.OnClickListener() {
+//      @Override
+//      public void onClick(View v) {
+//
+//        Uri uri = Uri.parse("https://twitter.com/sanaebadi97?s=09"); // missing 'http://' will cause crashed
+//        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+//      }
+//
+//  });
 
-        Uri uri = Uri.parse("https://github.com/sanaebadi97"); // missing 'http://' will cause crashed
-        startActivity(new Intent(Intent.ACTION_VIEW, uri));
 
-      }
-    });
-
-    //Linkedin
-    img_linkedin.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-
-        Uri uri = Uri.parse("https://www.linkedin.com/in/sana-ebadi-699a03134"); // missing 'http://' will cause crashed
-        startActivity(new Intent(Intent.ACTION_VIEW, uri));
-      }
-    });
-
-    //Twitter
-    img_twitter.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-
-        Uri uri = Uri.parse("https://twitter.com/sanaebadi97?s=09"); // missing 'http://' will cause crashed
-        startActivity(new Intent(Intent.ACTION_VIEW, uri));
-      }
-    });
   }
+
+  //************* Connect SocialMedia  ButterKnife *************
+
+  @OnClick({R.id.img_github,
+    R.id.img_linkedin, R.id.img_twitter
+  })
+  void onConnectionView(ImageView imgSocialMedia) {
+
+    switch (imgSocialMedia.getId()) {
+
+      //GitHub
+      case R.id.img_github:
+
+        Uri uriGithub = Uri.parse("https://github.com/sanaebadi97"); // missing 'http://' will cause crashed
+        startActivity(new Intent(Intent.ACTION_VIEW, uriGithub));
+
+        break;
+
+      //Linkedin
+      case R.id.img_linkedin:
+
+        Uri uriLinkedin = Uri.parse("https://www.linkedin.com/in/sana-ebadi-699a03134"); // missing 'http://' will cause crashed
+        startActivity(new Intent(Intent.ACTION_VIEW, uriLinkedin));
+
+        break;
+
+      //Twitter
+      case R.id.img_twitter:
+
+        Uri uriTwitter = Uri.parse("https://twitter.com/sanaebadi97?s=09"); // missing 'http://' will cause crashed
+        startActivity(new Intent(Intent.ACTION_VIEW, uriTwitter));
+
+        break;
+
+    }
+
+
+  }
+
 }
