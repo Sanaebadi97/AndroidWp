@@ -14,6 +14,7 @@ import android.widget.Button;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import sanaebadi.info.ahwazdev.R;
 
 public class NetworkActivity extends BaseActivity {
@@ -39,32 +40,60 @@ public class NetworkActivity extends BaseActivity {
         startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
       }
     });*/
+//
+//    btn_try_again.setOnClickListener(new View.OnClickListener() {
+//      @Override
+//      public void onClick(View v) {
+//
+//        if (isNetworkAvailable()) {
+//          startActivity(new Intent(NetworkActivity.this, MainActivity.class));
+//
+//        } else {
+//
+//          Snackbar snackbar = Snackbar
+//            .make(coordinatorLayout, "خطا در اتصال به اینترنت ", Snackbar.LENGTH_INDEFINITE)
+//            .setAction("تنظیمات", new View.OnClickListener() {
+//              @Override
+//              public void onClick(View view) {
+//                startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
+//              }
+//            });
+//
+//          ViewCompat.setLayoutDirection(snackbar.getView(), ViewCompat.LAYOUT_DIRECTION_RTL);
+//
+//          snackbar.show();
+//        }
+//      }
+//    });
 
-    btn_try_again.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
 
-        if (isNetworkAvailable()) {
-          startActivity(new Intent(NetworkActivity.this, MainActivity.class));
-
-        } else {
-
-          Snackbar snackbar = Snackbar
-            .make(coordinatorLayout, "خطا در اتصال به اینترنت ", Snackbar.LENGTH_INDEFINITE)
-            .setAction("تنظیمات", new View.OnClickListener() {
-              @Override
-              public void onClick(View view) {
-                startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
-              }
-            });
-
-          ViewCompat.setLayoutDirection(snackbar.getView(), ViewCompat.LAYOUT_DIRECTION_RTL);
-
-          snackbar.show();
-        }
-      }
-    });
   }
+
+
+  //****************** Click On Try Again Button By ButterKnife ******
+  @OnClick(R.id.btn_try_again)
+  void tryButton() {
+
+    if (isNetworkAvailable()) {
+      startActivity(new Intent(NetworkActivity.this, MainActivity.class));
+
+    } else {
+
+      Snackbar snackbar = Snackbar
+        .make(coordinatorLayout, "خطا در اتصال به اینترنت ", Snackbar.LENGTH_INDEFINITE)
+        .setAction("تنظیمات", new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+            startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
+          }
+        });
+
+      ViewCompat.setLayoutDirection(snackbar.getView(), ViewCompat.LAYOUT_DIRECTION_RTL);
+
+      snackbar.show();
+    }
+  }
+
 
   private boolean isNetworkAvailable() {
     ConnectivityManager connectivityManager
