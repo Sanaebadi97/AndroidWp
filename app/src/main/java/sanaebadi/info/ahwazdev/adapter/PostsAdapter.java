@@ -38,17 +38,19 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostsViewHol
   private Context context;
   private List<PostData> postDataList;
   private PostData postData;
+  private CustomClickListener listener;
 
-  public PostsAdapter(Context context, List<PostData> postDataList) {
+  public PostsAdapter(Context context, List<PostData> postDataList, CustomClickListener listener) {
     this.context = context;
     this.postDataList = postDataList;
+    this.listener = listener;
   }
 
   @NonNull
   @Override
   public PostsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
     
-   final View view = LayoutInflater.from(context).inflate(R.layout.posts_row, parent, false);
+   final View view = LayoutInflater.from(context).inflate(R.layout.post_row, parent, false);
     final PostsViewHolder postsViewHolder = new PostsViewHolder(view);
 
     view.setOnClickListener(new View.OnClickListener() {
