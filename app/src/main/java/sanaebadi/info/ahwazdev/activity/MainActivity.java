@@ -152,17 +152,17 @@ public class MainActivity extends BaseActivity {
         
          postDataList = response.body();
 
-       PostAdapter postAdapter = new PostAdapter(postDataList, MainActivity.this, new CustomClickListener() {
+ PostsAdapter postAdapter = new PostsAdapter(MainActivity.this, postDataList, new CustomClickListener() {
           @Override
           public void itemClick(View view, final int position) {
 
 
             Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
             intent.putExtra("POST_ID", postDataList.get(position).getId());
-            intent.putExtra("POST_TITLE", postDataList.get(position).getPostTitle().getRender());
-            intent.putExtra("POST_CONTENT", postDataList.get(position).getPostContent().getRender());
-            intent.putExtra("POST_IMAGE", postDataList.get(position).getEmbedded().
-              getWpfeaturedmediaList().get(0).getMediaDetails().getSizes().getFull()
+            intent.putExtra("POST_TITLE", postDataList.get(position).getPostTitle().getTitleRendered());
+            intent.putExtra("POST_CONTENT", postDataList.get(position).getPostContent().getContentRendered());
+            intent.putExtra("POST_IMAGE", postDataList.get(position).getPostEmbedded().
+              getWpFeaturedmedia().get(0).getMediaDetails().getSizes().getFull()
               .getSourceUrl());
 
             startActivity(intent);
