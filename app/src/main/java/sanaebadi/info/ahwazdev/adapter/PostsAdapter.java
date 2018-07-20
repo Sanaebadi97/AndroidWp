@@ -47,10 +47,20 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostsViewHol
   @NonNull
   @Override
   public PostsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    View view = LayoutInflater.from(context).inflate(R.layout.post_row, parent, false);
-    return new PostsViewHolder(view);
-  }
+    
+   final View view = LayoutInflater.from(context).inflate(R.layout.posts_row, parent, false);
+    final PostsViewHolder postsViewHolder = new PostsViewHolder(view);
 
+    view.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        listener.itemClick(view, postsViewHolder.getLayoutPosition());
+      }
+    });
+
+    return postsViewHolder;
+  }
+  
   @Override
   public void onBindViewHolder(@NonNull final PostsViewHolder holder, int position) {
 
@@ -91,7 +101,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostsViewHol
       }
     });
 
-    holder.itemView.setOnClickListener(new View.OnClickListener() {
+  /*  holder.itemView.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
 
@@ -107,7 +117,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostsViewHol
 
 
       }
-    });
+    });*/
 
     holder.img_popup.setOnClickListener(new View.OnClickListener() {
       @Override
