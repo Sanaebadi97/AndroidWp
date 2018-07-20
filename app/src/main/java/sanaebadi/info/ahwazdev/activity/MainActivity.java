@@ -42,6 +42,7 @@ public class MainActivity extends BaseActivity {
 
   private ApiInterface apiInterface;
   private Call<List<PostData>> postCall;
+  private List<PostData> postDataList;
 
 
   //Views
@@ -148,12 +149,30 @@ public class MainActivity extends BaseActivity {
       public void onResponse(Call<List<PostData>> call, Response<List<PostData>> response) {
 
         progress_load.setVisibility(View.VISIBLE);
+        
+         postDataList = response.body();
 
-        PostsAdapter postsAdapter = new PostsAdapter(MainActivity.this,
-          response.body());
-        posts_list.setAdapter(postsAdapter);
+       PostAdapter postAdapter = new PostAdapter(postDataList, MainActivity.this, new CustomClickListener() {
+          @Override
+          public void itemClick(View view, final int position) {
+
+
+            Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+            intent.putExtra("POST_ID", postDataList.get(position).getId());
+            intent.putExtra("POST_TITLE", postDataList.get(position).getPostTitle().getRender());
+            intent.putExtra("POST_CONTENT", postDataList.get(position).getPostContent().getRender());
+            intent.putExtra("POST_IMAGE", postDataList.get(position).getEmbedded().
+              getWpfeaturedmediaList().get(0).getMediaDetails().getSizes().getFull()
+              .getSourceUrl());
+
+            startActivity(intent);
+
+          }
+        });
+        posts_list.setAdapter(postAdapter);
 
         progress_load.setVisibility(View.GONE);
+
       }
 
       @Override
