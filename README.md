@@ -1,5 +1,5 @@
 # AndroidWp
-use WORDPRESS BACK-END for ANDROID APP
+Use WORDPRESS BACK-END for ANDROID APP
 
 
 # Demo
@@ -39,4 +39,4 @@ useed Retrofit 2 Library For connection to the server and Parse JSON File.
 
 apk file : https://sanaebadi.info/AndroidApk/app-release.apk
 
-good luck :)
+happy code :)
