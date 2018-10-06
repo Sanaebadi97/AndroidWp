@@ -22,7 +22,7 @@ For this we use two plugin and install them on our wordpress website.
 
 [secondPlugin](https://wordpress.org/plugins/rest-api-filter-fields/)
 
-To find out how to install these plugins, see this link : *** https://www.youtube.com/watch?v=AXM1QgMODW0 ***
+To find out how to install these plugins, see this [link](https://www.youtube.com/watch?v=AXM1QgMODW0)
 
 ---
 
