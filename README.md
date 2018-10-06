@@ -30,7 +30,7 @@ Once you have installed the plugins, you must have one such link to the API from
 
                                  https://your domin /wp-json/wp/v2/posts?_embed
                                  
-For Example This is for my website : *** https://sanaebadi.info/wp-json/wp/v2/posts?_embed ***
+For Example This is for [my website](https://sanaebadi.info/wp-json/wp/v2/posts?_embed)
 
 Note:I use This Url In This Project.
 
