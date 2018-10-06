@@ -16,11 +16,11 @@ For this we use two plugin and install them on our wordpress website.
 
 # First Plugin : 
 
-https://wordpress.org/plugins/rest-api/
+[FirstPlugin](https://wordpress.org/plugins/rest-api/)
 
 # Second Plugin :
 
-https://wordpress.org/plugins/rest-api-filter-fields/
+[secondPlugin](https://wordpress.org/plugins/rest-api-filter-fields/)
 
 To find out how to install these plugins, see this link : *** https://www.youtube.com/watch?v=AXM1QgMODW0 ***
 
