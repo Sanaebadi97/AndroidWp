@@ -39,4 +39,4 @@ useed Retrofit 2 Library For connection to the server and Parse JSON File.
 
 [apk file](https://sanaebadi.info/AndroidApk/app-release.apk)
 
-happy code :)
+happy code :))
