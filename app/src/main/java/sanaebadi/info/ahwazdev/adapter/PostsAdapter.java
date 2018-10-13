@@ -26,6 +26,7 @@ import butterknife.ButterKnife;
 import sanaebadi.info.ahwazdev.R;
 import sanaebadi.info.ahwazdev.activity.AuthorActivity;
 import sanaebadi.info.ahwazdev.activity.DetailsActivity;
+import sanaebadi.info.ahwazdev.handler.CustomClickListener;
 import sanaebadi.info.ahwazdev.model.PostData;
 
 /**

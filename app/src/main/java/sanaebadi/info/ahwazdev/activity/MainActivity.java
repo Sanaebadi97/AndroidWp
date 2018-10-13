@@ -32,6 +32,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import sanaebadi.info.ahwazdev.R;
 import sanaebadi.info.ahwazdev.adapter.PostsAdapter;
+import sanaebadi.info.ahwazdev.handler.CustomClickListener;
 import sanaebadi.info.ahwazdev.model.PostData;
 import sanaebadi.info.ahwazdev.rest.ApiClient;
 import sanaebadi.info.ahwazdev.rest.ApiInterface;
