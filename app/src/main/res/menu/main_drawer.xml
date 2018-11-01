@@ -4,7 +4,7 @@
     <item
         android:id="@+id/item1"
         android:icon="@drawable/ic_sentiment_dissatisfied_black_24dp"
-        android:title="@string/item1"/>
+        />
 
     <item
         android:id="@+id/item2"
