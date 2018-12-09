@@ -14,9 +14,9 @@ __Use WORDPRESS BACK-END for ANDROID APP__
 
 Use __Wordpress__ as ***Android Application*** __Back-end__
 
-For this we use two plugin and install them on our wordpress website.
+For this we use __two plugin__ and install them on our __wordpress website__.
 
-# First Plugin : 
+# ***First Plugin : ***
 
 [FirstPlugin](https://wordpress.org/plugins/rest-api/)
 
