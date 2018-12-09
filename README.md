@@ -20,7 +20,7 @@ For this we use __two plugin__ and install them on our __wordpress website__.
 
 [FirstPlugin](https://wordpress.org/plugins/rest-api/)
 
-# Second Plugin :
+# ***Second Plugin :***
 
 [secondPlugin](https://wordpress.org/plugins/rest-api-filter-fields/)
 
