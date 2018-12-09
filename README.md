@@ -12,7 +12,8 @@ __Use WORDPRESS BACK-END for ANDROID APP__
 
 ---
 
-Use Wordpress as Android Application Back-end..
+Use __Wordpress__ as ***Android Application*** __Back-end__
+
 For this we use two plugin and install them on our wordpress website.
 
 # First Plugin : 
