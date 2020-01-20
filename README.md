@@ -1,6 +1,6 @@
 # AndroidWp
 
-__Use WORDPRESS BACK-END for ANDROID APP__
+__Used WORDPRESS BACK-END for ANDROID APP__
 
 
 # Demo
